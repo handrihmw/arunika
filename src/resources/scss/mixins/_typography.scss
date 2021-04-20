@@ -1,0 +1,123 @@
+@mixin ar-typo($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: $font-size * 1px;
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height / $font-size;
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{$letter-spacing / $font-size}em;
+  }
+}
+
+h1, .h1 {
+  @include ar-typo(56, 64, 0);
+}
+
+h2, .h2 {
+  @include ar-typo(40, 56, 0);
+}
+
+h3, .h3 {
+  @include ar-typo(32, 42, 0);
+}
+
+h4, .h4 {
+  @include ar-typo(28, 36, 0);
+}
+
+h5, .h5 {
+  @include ar-typo(24, 32, .04);
+}
+
+h6, .h6 {
+  @include ar-typo(20, 26, 0);
+}
+
+.h7 {
+  @include ar-typo(18, 27, .04);
+}
+
+.h8 {
+  @include ar-typo(16, 26, 0);
+}
+
+.sub {
+  &-1 {
+    @include ar-typo(24, 24, .08);
+  }
+
+  &-2 {
+    @include ar-typo(20, 16, .08);
+  }
+
+  &-3 {
+    @include ar-typo(18, 16, .08);
+  }
+
+  &-4 {
+    @include ar-typo(16, 16, .08);
+  }
+
+  &-5 {
+    @include ar-typo(14, 16, .08);
+  }
+
+  &-6 {
+    @include ar-typo(12, 16, .08);
+  }
+}
+
+.body {
+  &-1 {
+    @include ar-typo(24, 24, .08);
+  }
+
+  &-2 {
+    @include ar-typo(20, 16, .08);
+  }
+
+  &-3 {
+    @include ar-typo(18, 16, .08);
+  }
+}
+
+.button {
+  &-1 {
+    @include ar-typo(20, 32, .32);
+  }
+
+  &-2 {
+    @include ar-typo(18, 32, .32);
+  }
+
+  &-3 {
+    @include ar-typo(16, 24, .32);
+  }
+
+  &-4 {
+    @include ar-typo(16, 24, .32);
+  }
+
+  &-5 {
+    @include ar-typo(14, 16, .32);
+  }
+}
+
+.caption {
+  &-1 {
+    @include ar-typo(14, 16, .32);
+  }
+
+  &-2 {
+    @include ar-typo(12, 16, .32);
+  }
+}
+
+.overline {
+  @include ar-typo(16, 24, .64);
+}

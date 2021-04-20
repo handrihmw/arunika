@@ -1,0 +1,724 @@
+<link rel="stylesheet preload" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+
+<!-- Desktop Navbar -->
+<nav class="pg-navbar bg-transparent navbar-white navbar navbar-expand-xl">
+  <a class="navbar-brand" aria-label="Logo Niagahoster" href="{{ '' | link }}">
+    <img src="{{ 'images/2021/logo/nh-logo-white.svg' | asset_url }}" height="40" width="255" loading="lazy" class="nh-navbar__logo img-fluid lozad d-none d-md-block w-100" alt="logo niagahoster">
+    <img src="{{ 'images/2021/logo/n-logo-white.svg' | asset_url }}" height="55" width="55" loading="lazy" class="nh-navbar__logo img-fluid lozad d-block d-md-none" alt="logo niagahoster">
+  </a>
+
+  <div class="d-flex justify-content-end d-xl-none">
+    <a href="{{ 'cart' | bblink }}" class="pg-navbar__menu-cart d-flex align-items-center" aria-label="Cart">
+      <i class="uil uil-shopping-cart">
+        <span class="pg-navbar__menu-cart-count cart-count d-none">1</span>
+      </i>
+    </a>
+    <a href="{{ 'login' | bblink }}" class="nh-btn__pill pg-navbar__menu-login--white login-btn d-xl-none mr-3" aria-label="Sign In">Login</a>
+    <a href="{{ 'client/logout' | bblink }}" class="nh-btn__pill pg-navbar__menu-login--white account-btn d-xl-none d-none mr-3" aria-label="Sign Out">Logout</a>
+    <div class="navigator d-xl-none">
+      <a class="collapsed d-xl-none toggle" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="line line-one"></span>
+        <span class="line line-two"></span>
+        <span class="line line-three"></span>
+      </a>
+    </div>
+  </div>
+  
+  <div class="collapse navbar-collapse justify-content-center pt-2">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <div class="dropdown pg-dropdown">
+          <div class="pg-navbar__dropdown-btn">
+            Hosting</div>
+          <div class="pg-navbar__dropdown-container">
+            <div class="pg-navbar__dropdown-content">
+              <a href="{{ 'hosting-indonesia' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/unlimited-hosting.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu " />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Unlimited Hosting</h3>
+                    <p class="pg-navbar__menu-description">Paket hosting terbaik & terlengkap</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'cloud-vps-hosting' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/cloud-vps-hosting.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu cloud vps hosting" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Cloud VPS Hosting</h3>
+                    <p class="pg-navbar__menu-description">Virtual Private Server terbaik</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'cloud-hosting' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/cloud-hosting.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu cloud vps hosting" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Hosting</h3>
+                    <p class="pg-navbar__menu-description">Performa hebat, website tanpa down</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'wordpress-hosting' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/wordpress-hosting.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu wordpress hosting" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Wordpress Hosting</h3>
+                    <p class="pg-navbar__menu-description">Optimal untuk website Wordpress</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'email-hosting' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/email-hosting.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu email hosting" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Email Hosting</h3>
+                    <p class="pg-navbar__menu-description">Solusi kirim email profesional</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'transfer-hosting' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/transfer-hosting.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu transfer hosting" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Transfer Hosting</h3>
+                    <p class="pg-navbar__menu-description">Pindah hosting ke Niagahoster</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown pg-dropdown">
+          <div class="pg-navbar__dropdown-btn">
+            Domain</div>
+          <div class="pg-navbar__dropdown-container">
+            <div class="pg-navbar__dropdown-content">
+              <a href="{{ 'domain-murah' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/cari-domain.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                    height="50" width="50" loading="lazy" alt="icon menu cari domain" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Cari Domain</h3>
+                    <p class="pg-navbar__menu-description">Temukan domain impian Anda di sini</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'domain-id' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/domain-id.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                    height="50" width="50" loading="lazy" alt="icon menu domain id" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Domain ID</h3>
+                    <p class="pg-navbar__menu-description">Pendaftaran nama domain Indonesia</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'whois' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/cek-whois.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                    height="50" width="50" loading="lazy" alt="icon menu check whois" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Check WHOIS</h3>
+                    <p class="pg-navbar__menu-description">Lihat info WHOIS website Anda</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'transfer-domain' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/transfer-domain.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu transfer domain" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Transfer Domain</h3>
+                    <p class="pg-navbar__menu-description">Pindahkan domain ke Niagahoster</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown pg-dropdown">
+          <div class="pg-navbar__dropdown-btn">Website</div>
+          <div class="pg-navbar__dropdown-container">
+            <div class="pg-navbar__dropdown-content">
+              <a href="{{ 'membuat-website' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/website-instan.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu website instan" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Website Instan</h3>
+                    <p class="pg-navbar__menu-description">Website kilat siap online</p>
+                  </div>
+                </div>
+              </a>
+              <a href="https://www.niagaweb.co.id" class="pg-navbar__dropdown-link" target="_blank">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/jasa-pembuatan-website.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu jasa pembuatan website" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Jasa Pembuatan Website</h3>
+                    <p class="pg-navbar__menu-description">Website idaman sesuai kebutuhan</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown pg-dropdown">
+          <div class="pg-navbar__dropdown-btn">Kemitraan</div>
+          <div class="pg-navbar__dropdown-container">
+            <div class="pg-navbar__dropdown-content">
+              <a href="{{ 'poin' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/niagahoster-poin.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster poin" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Niagahoster Poin</h3>
+                    <p class="pg-navbar__menu-description">Tukar poin dengan hadiah menarik</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'reseller-hosting' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/niagahoster-partner.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu  partner" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Niagahoster Partner</h3>
+                    <p class="pg-navbar__menu-description">Mulai bisnis hosting Anda sendiri</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'afiliasi' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/afiliasi.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                    height="50" width="50" loading="lazy" alt="icon menu afiliasi niagahoster" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Program Afiliasi Niagahoster</h3>
+                    <p class="pg-navbar__menu-description">Afiliasi hosting dengan komisi 70%</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown pg-dropdown">
+          <div class="pg-navbar__dropdown-btn">Wawasan</div>
+          <div class="pg-navbar__dropdown-container">
+            <div class="pg-navbar__dropdown-content">
+              <a href="{{ 'blog' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/blog.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                    height="50" width="50" loading="lazy" alt="icon menu blog" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Blog</h3>
+                    <p class="pg-navbar__menu-description">Blog resmi Niagahoster</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'ebook' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/ebook.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                    height="50" width="50" loading="lazy" alt="icon menu ebook" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Ebook</h3>
+                    <p class="pg-navbar__menu-description">Kumpulan ebook terbaik Niagahoster</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'kb' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/knowlegde-base.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu kb" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Knowledge Base</h3>
+                    <p class="pg-navbar__menu-description">Panduan teknis hosting & website</p>
+                  </div>
+                </div>
+              </a>
+              <a href="https://course.niagahoster.co.id/" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/niagahoster-course.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster course" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Niagahoster Course</h3>
+                    <p class="pg-navbar__menu-description">Kursus online digital marketing</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'forum' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/niagahoster-forum.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster forum" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Niagahoster Forum</h3>
+                    <p class="pg-navbar__menu-description">Diskusi layanan Niagahoster</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="dropdown pg-dropdown">
+          <div class="pg-navbar__dropdown-btn">Acara</div>
+          <div class="pg-navbar__dropdown-container">
+            <div class="pg-navbar__dropdown-content">
+              <a href="{{ 'promosi' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/promo-diskon-spesial.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu promo diskon" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Promo & Diskon Spesial</h3>
+                    <p class="pg-navbar__menu-description">Promo spesial hosting & domain</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'event' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/niagahoster-event.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster event" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Niagahoster Event</h3>
+                    <p class="pg-navbar__menu-description">Insight terhangat oleh para pakar</p>
+                  </div>
+                </div>
+              </a>
+              <a href="{{ 'virtual-summit' | link }}" class="pg-navbar__dropdown-link">
+                <div class="pg-navbar__menu-container">
+                  <img src="{{ 'images/2021/navbar/niagahoster-virtual-summit.svg' | asset_url }}"
+                    class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster virtual summit" />
+                  <div class="pg-navbar__menu-content">
+                    <h3 class="pg-navbar__menu-title">Niagahoster Virtual Summit</h3>
+                    <p class="pg-navbar__menu-description">Bincang bisnis online & teknologi</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="justify-content-end d-xl-block d-none">
+    <ul class="nav">
+      <li class="nav-item">
+        <a href="{{ 'cart' | bblink }}" class="pg-navbar__menu-cart d-flex align-items-center" aria-label="Cart">
+          <i class="uil uil-shopping-cart">
+            <span class="pg-navbar__menu-cart-count cart-count d-none">1</span>
+          </i>
+        </a>
+      </li>
+      <li class="nav-item account-btn d-none">
+        <a href="{{ 'client' | bblink }}" class="nh-btn__pill pg-navbar__menu-login--white mr-2" aria-label="Member Area">Member Area</a>
+      </li>
+      <li class="nav-item logout-btn d-none">
+        <a href="{{ 'client/logout' | bblink }}" class="nh-btn__pill pg-navbar__menu-login--white mr-2" aria-label="Sign Out">Logout</a>
+      </li>
+      <li class="nav-item login-btn">
+        <a href="{{ 'login' | bblink }}" class="nh-btn__pill pg-navbar__menu-login--white" aria-label="Sign In">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Mobile Navbar -->
+<div class="collapse navbar-collapse justify-content-center pt-1 d-xl-none" id="navbarNav">
+  <div class="accordion js-accordion p-3">
+    <div class="accordion__item js-accordion__item">
+      <div class="accordion-header js-accordion__header">Hosting</div>
+      <div class="accordion-body js-accordion__body">
+        <div class="accordion__container">
+          <div class="accordion-body__contents">
+            <a href="{{ 'hosting-indonesia' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/unlimited-hosting.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu unlimited hosting" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Unlimited Hosting</h3>
+                  <p class="pg-navbar__menu-description">Paket hosting terbaik & terlengkap</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'cloud-vps-hosting' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/cloud-vps-hosting.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu cloud vps hosting" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Cloud VPS Hosting</h3>
+                  <p class="pg-navbar__menu-description">Virtual Private Server terbaik</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'cloud-hosting' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/cloud-hosting.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu cloud vps hosting" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Cloud Hosting</h3>
+                  <p class="pg-navbar__menu-description">Performa hebat, website tanpa down</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'wordpress-hosting' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/wordpress-hosting.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu wordpress hosting" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Wordpress Hosting</h3>
+                  <p class="pg-navbar__menu-description">Optimal untuk website Wordpress</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'email-hosting' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/email-hosting.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu email hosting" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Email Hosting</h3>
+                  <p class="pg-navbar__menu-description">Solusi kirim email profesional</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'transfer-hosting' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/transfer-hosting.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu transfer hosting" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Transfer Hosting</h3>
+                  <p class="pg-navbar__menu-description">Pindah hosting ke Niagahoster</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion__item js-accordion__item">
+      <div class="accordion-header js-accordion__header">Domain</div>
+      <div class="accordion-body js-accordion__body">
+        <div class="accordion__container">
+          <div class="accordion-body__contents">
+            <a href="{{ 'domain-murah' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/cari-domain.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                  height="50" width="50" loading="lazy" alt="icon menu domain" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Cari Domain</h3>
+                  <p class="pg-navbar__menu-description">Temukan domain impian Anda di sini</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'domain-id' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/domain-id.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                  height="50" width="50" loading="lazy" alt="icon menu domain id" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Domain ID</h3>
+                  <p class="pg-navbar__menu-description">Pendaftaran nama domain Indonesia</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'whois' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/cek-whois.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                  height="50" width="50" loading="lazy" alt="icon menu check whois" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Check WHOIS</h3>
+                  <p class="pg-navbar__menu-description">Lihat info WHOIS website Anda</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'transfer-domain' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/transfer-domain.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu transfer domain" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Transfer Domain</h3>
+                  <p class="pg-navbar__menu-description">Pindahkan domain ke Niagahoster</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion__item js-accordion__item">
+      <div class="accordion-header js-accordion__header">Website</div>
+      <div class="accordion-body js-accordion__body">
+        <div class="accordion__container">
+          <div class="accordion-body__contents">
+            <a href="{{ 'membuat-website' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/website-instan.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu website instan" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Website Instan</h3>
+                  <p class="pg-navbar__menu-description">Website kilat siap online</p>
+                </div>
+              </div>
+            </a>
+            <a href="https://www.niagaweb.co.id" class="pg-navbar__dropdown-link" target="_blank">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/jasa-pembuatan-website.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu jasa pembuatan website" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Jasa Pembuatan Website</h3>
+                  <p class="pg-navbar__menu-description">Website idaman sesuai kebutuhan</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion__item js-accordion__item">
+      <div class="accordion-header js-accordion__header">Kemitraan</div>
+      <div class="accordion-body js-accordion__body">
+        <div class="accordion__container">
+          <div class="accordion-body__contents">
+            <a href="{{ 'poin' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/niagahoster-poin.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster poin" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Niagahoster Poin</h3>
+                  <p class="pg-navbar__menu-description">Tukar poin dengan hadiah menarik</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'reseller-hosting' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/niagahoster-partner.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster partner" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Niagahoster Partner</h3>
+                  <p class="pg-navbar__menu-description">Mulai bisnis hosting Anda sendiri</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'afiliasi' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/afiliasi.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                  height="50" width="50" loading="lazy" alt="icon menu afiliasi" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Program Afiliasi Niagahoster</h3>
+                  <p class="pg-navbar__menu-description">Afiliasi hosting dengan komisi 70%</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion__item js-accordion__item">
+      <div class="accordion-header js-accordion__header">Wawasan</div>
+      <div class="accordion-body js-accordion__body">
+        <div class="accordion__container">
+          <div class="accordion-body__contents">
+            <a href="{{ 'blog' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/blog.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                  height="50" width="50" loading="lazy" alt="icon menu blog" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Blog</h3>
+                  <p class="pg-navbar__menu-description">Blog resmi Niagahoster</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'ebook' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/ebook.svg' | asset_url }}" class="pg-navbar__menu-icon img-fluid"
+                  height="50" width="50" loading="lazy" alt="icon menu ebook" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Ebook</h3>
+                  <p class="pg-navbar__menu-description">Kumpulan ebook terbaik Niagahoster</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'kb' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/knowlegde-base.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu kb" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Knowledge Base</h3>
+                  <p class="pg-navbar__menu-description">Panduan teknis hosting & website</p>
+                </div>
+              </div>
+            </a>
+            <a href="https://course.niagahoster.co.id/" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/niagahoster-course.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster course" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Niagahoster Course</h3>
+                  <p class="pg-navbar__menu-description">Kursus online digital marketing</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'forum' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/niagahoster-forum.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster forum" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Niagahoster Forum</h3>
+                  <p class="pg-navbar__menu-description">Diskusi layanan Niagahoster</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion__item js-accordion__item">
+      <div class="accordion-header js-accordion__header">Acara</div>
+      <div class="accordion-body js-accordion__body">
+        <div class="accordion__container">
+          <div class="accordion-body__contents">
+            <a href="{{ 'promosi' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/promo-diskon-spesial.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu promo diskon" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Promo & Diskon Spesial</h3>
+                  <p class="pg-navbar__menu-description">Promo spesial hosting & domain</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'event' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/niagahoster-event.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster event" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Niagahoster Event</h3>
+                  <p class="pg-navbar__menu-description">Insight terhangat oleh para pakar</p>
+                </div>
+              </div>
+            </a>
+            <a href="{{ 'virtual-summit' | link }}" class="pg-navbar__dropdown-link">
+              <div class="pg-navbar__menu-container">
+                <img src="{{ 'images/2021/navbar/niagahoster-virtual-summit.svg' | asset_url }}"
+                  class="pg-navbar__menu-icon img-fluid" height="50" width="50" loading="lazy" alt="icon menu niagahoster virtual summit" />
+                <div class="pg-navbar__menu-content">
+                  <h3 class="pg-navbar__menu-title">Niagahoster Virtual Summit</h3>
+                  <p class="pg-navbar__menu-description">Bincang bisnis online & teknologi</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-item account-btn text-center pt-5 d-none">
+      <a href="{{ 'client' | bblink }}" class="nh-btn__pill pg-navbar__menu-login--white btn-block mr-2" aria-label="Member Area">Member Area</a>
+    </div>
+    <hr class="pg-navbar__hr">
+    <div class="menu__social">
+      <div class="pg-navbar__copyright">
+        Copyright ©2020 Niagahoster
+      </div>
+      <div class="pg-navbar__social">
+        <ul class="pg-navbar__list-icon">
+          <li class="pg-navbar__social-icon"><a href="https://www.facebook.com/niagahoster" class="pg-navbar__icon"
+              target="_blank" rel="noopener noreferrer" aria-label="facebook niagahoster"><span class="fab fa-facebook-f"></span></a>
+          </li>
+          <li class="pg-navbar__social-icon"><a href="https://www.instagram.com/niagahoster.id" class="pg-navbar__icon"
+              target="_blank" rel="noopener noreferrer" aria-label="instagram niagahoster"><span class="fab fa-instagram"></span></a>
+          </li>
+          <li class="pg-navbar__social-icon"><a href="https://www.linkedin.com/company/niagahoster"
+              class="pg-navbar__icon" target="_blank" rel="noopener noreferrer" aria-label="linkedin niagahoster"><span
+              class="fab fa-linkedin-in"></span></a>
+          </li>
+          <li class="pg-navbar__social-icon"><a href="https://twitter.com/niagahoster" class="pg-navbar__icon"
+              target="_blank" rel="noopener noreferrer" aria-label="twitter niagahoster"><span class="fab fa-twitter"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var accordion = (function(){
+  var $accordion = $('.js-accordion');
+  var $accordion_header = $accordion.find('.js-accordion__header');
+  var $accordion_item = $('.js-accordion__item');
+
+  var settings = {
+    speed: 400,
+    oneOpen: false
+  };
+    
+  return {
+    init: function($settings) {
+      $accordion_header.on('click', function() {
+        accordion.toggle($(this));
+      });
+      
+      $.extend(settings, $settings); 
+      
+      if(settings.oneOpen && $('.js-accordion__item.active').length > 1) {
+        $('.js-accordion__item.active:not(:first)').removeClass('active');
+      }
+      
+      $('.js-accordion__item.active').find('> .js-accordion__body').show();
+    },
+    toggle: function($this) {
+      if(settings.oneOpen && $this[0] != $this.closest('.js-accordion').find('> .js-accordion__item.active > .js-accordion__header')[0]) {
+        $this.closest('.js-accordion')
+              .find('> .js-accordion__item') 
+              .removeClass('active')
+              .find('.js-accordion__body')
+              .slideUp()
+      }
+      
+      $this.closest('.js-accordion__item').toggleClass('active');
+      $this.next().stop().slideToggle(settings.speed);
+    }
+  }
+})();
+
+$(document).ready(function(){
+  accordion.init({ speed: 300, oneOpen: true });
+});
+
+$('.navigator').click(function() {
+  $('.toggle').toggleClass('close');
+  $('nav').removeClass('bg-transparent');
+  $('nav').toggleClass('bg-soft-blue');
+  $('.line').toggleClass('line--blue');
+  $(this).toggleClass('navigator--blue');
+  $(this).removeClass('line');
+
+  $('.pg-navbar__menu-login--white').toggleClass('pg-navbar__menu-login');
+  $('.pg-navbar__menu-cart').toggleClass('pg-navbar__menu-cart--blue');
+  $('.pg-navbar__menu-cart-count').toggleClass('pg-navbar__menu-cart-count--blue');
+
+  if ($('.pg-navbar').hasClass('bg-soft-blue')) {
+    $('.navbar-brand > img').attr('src',"{{ 'images/2021/logo/n-logo-blue.svg' | asset_url }}");
+  } else {
+    $('.navbar-brand > img').attr('src',"{{ 'images/2021/logo/n-logo-white.svg' | asset_url }}");
+  }
+});
+
+if (isMobile) {
+  (document.getElementsByClassName("pg-navbar__desktop")[0] || null).remove();
+} else {
+  (document.getElementsByClassName("pg-navbar__mobile")[0] || null).remove();
+}
+</script>

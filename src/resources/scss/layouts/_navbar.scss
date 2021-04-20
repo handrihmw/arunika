@@ -1,0 +1,478 @@
+.ar-dropdown {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    background: none repeat scroll 0 0 transparent;
+    background: #fff;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    width: 0;
+  }
+
+  &:hover::after {
+    left: 0;
+    width: 70%;
+  }
+}
+
+.ar-dropdown:hover {
+  .ar-navbar__dropdown-container {
+    display: block;
+  }
+
+  .ar-nabvbar__dropdown-btn {
+    background-color: transparent;
+  }
+}
+
+/* Navbar Custom */
+.ar-navbar {
+  background: transparent;
+  padding: 30px 50px;
+
+  @include media-breakpoint-down(md) {
+    background: transparent;
+    padding: .8rem 1rem;
+
+    .ar-navbar--white {
+      background-color: #f5faff;
+    }
+  }
+
+  &__dropdown-content {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 32px 72px rgba(0, 87, 178, 0.16);
+    padding: 14px;
+  }
+  
+  &__dropdown-btn {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'NunitoSansRegular', sans-serif;
+    font-size: 1rem;
+    letter-spacing: .05em;
+    padding-right: 40px;
+    padding-bottom: 10px;
+  }
+  
+  &__dropdown-container {
+    background-color: unset;
+    border-radius: 16px;
+    display: none;
+    left: -30px;
+    min-width: 160px;
+    position: absolute;
+    padding-top: 25px;
+    white-space: nowrap;
+    z-index: 1;
+  
+    &::before {
+      border: 10px solid transparent;
+      border-bottom-color: #fff;
+      content: '';
+      left: 20%;
+      margin-left: -20px;
+      position: absolute;
+      top: 5px;
+    }
+  
+    .ar-navbar__dropdown-link {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+  
+      &:hover {
+        background: #ebf5ff;
+        border-radius: 12px;
+      }
+    }
+  }
+  
+  &__menu-container {
+    margin: 5px;
+    overflow: auto;
+  
+    @include media-breakpoint-down(md) {
+      margin: 18px 0;
+    }
+
+    @include ipadProPortrait {
+      margin: 30px 0;
+    }
+  }
+  
+  &__menu-icon {
+    display: block;
+    float: left;
+  }
+  
+  &__menu-content {
+    padding-left: 70px;
+  }
+  
+  &__menu-title {
+    color: #29384e;
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: .005em;
+    white-space: nowrap;
+  }
+  
+  &__menu-description {
+    color: #7f8895;
+    font-family: 'NunitoSansRegular', sans-serif;
+    font-size: .875rem;
+    line-height: 24px;
+    letter-spacing: .005em;
+    white-space: nowrap;
+  }
+
+  &__menu-cart {
+    padding: 0 10px;
+
+    .fas, 
+    .uil {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+      .fas,
+      .uil {
+        color: #fff;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__menu-cart--blue {
+    @include media-breakpoint-down(lg) {
+      .fas,
+      .uil {
+        color: #007aff;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__menu-cart-count {
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: 1rem;
+    height: 15px;
+    left: -13px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    color: #fff;
+    padding: 3px 8px;
+    position: relative;
+    top: -10px;
+    width: 15px;
+  }
+
+  &__menu-cart-count--blue {
+    @extend .ar-navbar__menu-cart-count;
+    border: 1px solid #007aff;
+    color: #007aff;
+  }
+  
+  &__menu-login {
+    text-decoration: none;
+
+    @include media-breakpoint-down(lg) {
+      border: 1px solid #007aff;
+      color: #007aff;
+
+      .ar-navbar__menu-login--white {
+        border: 1px solid #fff;
+        color: #fff;
+      }
+    }
+  }
+
+  &__copyright {
+    color: #29384e;
+    font-size: 12px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  &__social {
+    padding: 20px;
+    width: auto;
+    height: 100px;
+  }
+
+  &__list-icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 5px 0;
+
+    > li:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__icon {
+    background: #29384e;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 20px;
+    height: 48px;
+    position: relative;
+    transition: ease .6s;
+    width: 48px;
+
+    .fab {
+      color: rgb(100%,100%,100%);
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__hr {
+    border-top: 1px solid #d5ebfe;
+    margin: 32px 150px;
+
+    @include media-breakpoint-down(md) {
+      margin: 32px 1px;
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin: 32px 55px;
+    }
+  }
+
+  &__desktop {
+    display: block;
+    visibility: visible;
+
+    @include media-breakpoint-down(xl) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    visibility: hidden;
+
+    @include media-breakpoint-down(xl) {
+      display: block;
+      visibility: visible;
+    }
+  }
+}
+
+/* Navbar Toggler Mobile */
+.navigator {
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: inline-block;
+	padding: 10px;
+	position: relative;
+}
+
+.navigator--blue {
+	@extend .navigator;
+  border: 1px solid #007aff;
+}
+
+.toggle {
+	height: 20px;
+	position: relative;
+	width: 25px;
+}
+
+.line {
+	background-color: #fff;
+	border-radius: 5px;
+	height: 1px;
+	position: absolute;
+	transition: all .5s;
+	width: 100%;
+}
+
+.line--blue {
+  @extend .line;
+	background-color: #007aff;
+}
+
+.line-one {
+	top: 30%;
+}
+
+.line-two {
+	top: 60%;
+}
+
+.line-three {
+	top: 90%;
+}
+
+.close {
+	.line-one {
+		transform: rotate(45deg);
+		top: 60%;
+	}
+
+	.line-three {
+		transform: rotate(135deg);
+		top: 60%;
+	}
+
+	.line-two {
+		opacity: 0;
+	}
+}
+
+/* Accordion Meneu Mobile */
+.accordion {
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.accordion-header,
+.accordion-body {
+  background: #fff;
+}
+
+.accordion-header {
+  background: transparent;
+  color: #29384e;
+  cursor: pointer;
+  font-family: 'NunitoSansBold', sans-serif;
+  font-size: 1.143rem;
+  letter-spacing: .005em;
+  padding: 16px 1px;
+  transition: all .3s;
+  text-transform: capitalize;
+
+  &:hover {
+    background: transparent;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.accordion-body {
+  background: transparent;
+  color: #29384e;
+  display: none;
+}
+
+.accordion-body__contents {
+  background-color: #fff;
+  border-radius: 12px;
+  font-size: .85em;
+  padding: 1em;
+}
+
+.accordion__item.active:last-child .accordion-header {
+  border-radius: none;
+}
+
+.accordion:first-child > .accordion__item > .accordion-header {
+  border-bottom: 1px solid transparent;
+}
+
+.accordion__item > .accordion-header:after {
+  background: transparent;
+  border-radius: 4px;
+  color: #29384e;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  float: right;
+  padding: 0 8px;
+  position: relative;
+  top: -2px;
+  transition: all .3s;
+}
+
+.accordion__item.active > .accordion-header:after {
+  background: #e0efff;
+  border-radius: 4px;
+  color: #29384e;
+  content: "\f106";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  float: right;
+  padding: 0 8px;
+  position: relative;
+  top: -2px;
+  transition: all .3s;
+}
+
+.accordion__item.active .accordion-header {
+  background: transparent;
+}
+
+.accordion__item .accordion__item .accordion-header {
+  background: transparent;
+  color: #29384e;
+}
+
+@media screen and (max-width: 1000px) {
+  .accordion {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .bg-soft-blue,
+  .navbar-collapse {
+    background-color: #f5faff;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+.ar-navbar-btn__outline {
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  display: inline-block;
+  font-family: 'NunitoSansBold', sans-serif;
+  font-size: 1rem;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 1s;
+
+  &:hover {
+    background: #fff;
+    color: #ff9800;
+    text-decoration: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 10px 32px;
+  }
+
+  @include ipadProPortrait {
+    padding: 10px 32px;
+  }
+}

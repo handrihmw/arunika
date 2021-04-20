@@ -1,0 +1,146 @@
+// variables
+$slowly: all .2s ease;
+
+// mixins
+@mixin transition($value...) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  transition: $value;
+}
+
+@mixin transform($value...) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+
+article {
+  padding: 50px 0;
+}
+
+// slide menu styles start here
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 0;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 10px 15px 5px;
+
+  span {
+    vertical-align: middle;
+  }
+
+  .bars {
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 5px;
+    background-color: rgba(0,0,0,0.7);
+    @include transition($slowly);
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 5px;
+      background-color: rgba(0,0,0,0.7);
+      @include transition($slowly);
+    }
+
+    &:before {
+      top: 10px;
+    }
+
+    &:after {
+      bottom: 10px;
+    }
+  }
+}
+
+.open .hamburger .bars {
+  background-color: transparent;
+  @include transition($slowly);
+
+  &::before {
+    top: 0;
+    @include transform(rotate(-45deg));
+  }
+
+  &::after {
+    bottom: 0;
+    @include transform(rotate(45deg));
+  }
+}
+
+.menu {
+  width: 250px;
+  height: 100%;
+  padding: 75px 20px 0;
+  background-color: CadetBlue;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  right: -100%;
+  top: 0;
+  opacity: 0;
+  z-index: 999;
+  margin-top: 0;
+  @include transition($slowly);
+
+  a {
+    color: WhiteSmoke;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.open .menu {
+  right: 0;
+  opacity: 1;
+  @include transition($slowly);
+}
+
+.menu:hover {
+  overflow-y: auto;
+}
+
+.overlay{
+	position: fixed;
+	height: 100%;
+	top: 0;
+	background: rgba(0,191,166,0.9);
+}
+
+.ar-menu {
+  &__list {
+    list-style: none;
+    padding: 10px;
+  }
+
+  &__item {
+    position: relative;
+    line-height: 20px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+
+    &-list {
+      display: block;
+      color: #6b7280;
+      padding: 10px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 4px;
+        color: #3a4166;
+        padding: 10px;
+        text-decoration: none;
+      }
+    }
+  }
+}

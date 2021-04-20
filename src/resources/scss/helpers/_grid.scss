@@ -1,0 +1,57 @@
+.ar-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  @media (max-width: 576px) {
+    grid-template-columns: none;
+  }
+}
+
+.ar-grid-item {
+  margin-top: 50px;
+  padding: 0 5px;
+  width: 95%;
+  text-align: left;
+
+  &__image {
+    aspect-ratio: 1/1;
+    width: auto;
+    height: auto;
+  }
+
+  &__title {
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: 1.125rem;
+    margin-top: 30px;
+  }
+
+  &__description {
+    color: rgba(58, 65, 102, .7);
+    font-family: 'NunitoSansRegular', sans-serif;
+    font-size: .875rem;
+    line-height: 25px;
+    letter-spacing: .05em;
+    margin-top: 20px;
+  }
+}
+
+%displayContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ar-grid {
+  @extend %displayContent;
+  align-content: center;
+  width: 100%;
+  height: auto;
+
+  .box {
+    @extend %displayContent;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 165px;
+    height: 80px;
+  }
+}

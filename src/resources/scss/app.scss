@@ -1,0 +1,28 @@
+@import "bootstrap/scss/bootstrap";
+
+@import "helpers/all";
+
+@import "mixins/all";
+
+@import "modules/all";
+
+@import "layouts/all";
+
+@import "components/all";
+
+@import "partials/all";
+
+@import "pages/home";
+@import "pages/managed-wordpress";
+
+body {
+  background-color: #f6fbff;
+  box-sizing: border-box;
+  color: #3a4166;
+  font-family: 'NunitoSansRegular', sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

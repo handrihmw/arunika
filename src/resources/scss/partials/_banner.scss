@@ -1,0 +1,78 @@
+.ar-banner {
+  background: linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%);
+  box-shadow: 0px 32px 72px rgba(0, 87, 178, 0.16);
+  border-radius: 24px;
+  color: #fff;
+  height: auto;
+  padding: 65px 30px;
+  width: 1110px;
+
+  @include media-breakpoint-down(sm) {
+    height: 100%;
+    padding: 40px 20px;
+    width: auto;
+  }
+
+  &__illustration {
+    height: auto;
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: clamp(1.75rem, 1.75rem, 2.5rem);
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -.02em;
+    margin: 2rem 0;
+
+    @include media-breakpoint-down(sm) {
+      line-height: 2.5rem;
+      padding: auto;
+    }
+  }
+
+  &__description {
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: clamp(1rem, 1rem, 1rem);
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: .005em;
+    margin-bottom: 2.5rem;
+
+    @include media-breakpoint-down(sm) {
+      line-height: 1.75rem;
+      padding: auto;
+    }
+
+    &-center {
+      padding: 0 170px;
+
+      @include media-breakpoint-down(sm) {
+        line-height: 1.75rem;
+        padding: 0;
+      }
+    }
+  }
+
+  &__button {
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: clamp(1rem, 1rem, 1.25rem);
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: .02em;
+
+    @include media-breakpoint-down(sm) {
+      line-height: 1.75rem;
+      margin-bottom: 30px;
+      text-align: center;
+      white-space: nowrap;
+      width: 100%;
+    }
+  }
+}

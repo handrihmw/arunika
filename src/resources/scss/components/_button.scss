@@ -1,0 +1,238 @@
+.ar-btn {
+  @extend %type-base;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  font-size: 1rem;
+  padding: .75rem 4rem;
+}
+
+.btn {
+  /* Solid Button */
+  &--orange#{&}--solid {
+    @include button-bg($ar-orange);
+    background-color: $ar-orange;
+    box-shadow: $bxs-orange;
+    color: $ar-white;
+  }
+
+  &--blue#{&}--solid {
+    @include button-bg($ar-blue);
+    background-color: $ar-blue;
+    box-shadow: $bxs-blue;
+    color: $ar-white;
+  }
+
+  &--green#{&}--solid {
+    @include button-bg($ar-green);
+    background-color: $ar-green;
+    box-shadow: $bxs-green;
+    color: $ar-white;
+  }
+
+  &--red#{&}--solid {
+    @include button-bg($ar-red);
+    background-color: $ar-red;
+    box-shadow: $bxs-red;
+    color: $ar-white;
+  }
+
+  &--dark#{&}--solid {
+    @include button-bg($ar-black);
+    background-color: $ar-black;
+    box-shadow: $bxs-black;
+    color: $ar-white;
+  }
+
+  &--neutral#{&}--solid {
+    @include button-neutral($ar-orange);
+  }
+
+  &--link#{&}--solid {
+    @include button-link($ar-link);
+  }
+
+  &--disabled#{&}--solid {
+    @include button-disabled($ar-gray);
+  }
+
+  &--default#{&}--solid {
+    @include button-default($ar-gray);
+  }
+
+/* Pill Button */
+  &--orange#{&}--pill {
+    @include button-pill($ar-orange);
+    border-radius: 2em;
+    background-color: $ar-orange;
+    box-shadow: $bxs-orange;
+    color: $ar-white;
+  }
+
+  &--blue#{&}--pill {
+    @include button-pill($ar-blue);
+    border-radius: 2em;
+    background-color: $ar-blue;
+    box-shadow: $bxs-blue;
+    color: $ar-white;
+  }
+
+  &--green#{&}--pill {
+    @include button-pill($ar-green);
+    border-radius: 2em;
+    background-color: $ar-green;
+    box-shadow: $bxs-green;
+    color: $ar-white;
+  }
+
+  &--red#{&}--pill {
+    @include button-pill($ar-red);
+    border-radius: 2em;
+    background-color: $ar-red;
+    box-shadow: $bxs-red;
+    color: $ar-white;
+  }
+
+  &--dark#{&}--pill {
+    @include button-pill($ar-black);
+    border-radius: 2em;
+    background-color: $ar-black;
+    box-shadow: $bxs-black;
+    color: $ar-white;
+  }
+
+  &--neutral#{&}--pill {
+    @include button-neutral($ar-orange);
+    border-radius: 2em;
+  }
+
+  &--link#{&}--pill {
+    @include button-link($ar-link);
+    border-radius: 2em;
+  }
+
+  &--disabled#{&}--pill {
+    @include button-disabled($ar-gray);
+    border-radius: 2em;
+  }
+
+  &--default#{&}--pill {
+    @include button-default($ar-gray);
+    border-radius: 2em;
+  }
+
+  /* Button Outline */
+  &--orange#{&}--outline {
+    @include button-outline($ar-orange);
+    border: 1px solid $ar-orange;
+    color: $ar-orange;
+  }
+
+  &--blue#{&}--outline {
+    @include button-outline($ar-blue);
+    border: 1px solid $ar-blue;
+    color: $ar-blue;
+  }
+
+  &--green#{&}--outline {
+    @include button-outline($ar-green);
+    border: 1px solid $ar-green;
+    color: $ar-green;
+  }
+
+  &--red#{&}--outline {
+    @include button-outline($ar-red);
+    border: 1px solid $ar-red;
+    color: $ar-red;
+  }
+
+  &--dark#{&}--outline {
+    @include button-outline($ar-black);
+    border: 1px solid $ar-black;
+    color: $ar-black;
+  }
+
+  &--neutral#{&}--outline {
+    @include button-neutral($ar-orange);
+    background: transparent;
+    border: 1px solid $ar-orange;
+  }
+
+  &--link#{&}--outline {
+    @include button-link($ar-link);
+  }
+
+  &--disabled#{&}--outline {
+    @include button-disabled($ar-gray);
+    background: transparent;
+    border: 1px solid $ar-gray;
+  }
+
+  &--default#{&}--outline {
+    @include button-default($ar-gray);
+    border: 1px solid $ar-gray;
+    color: $ar-white;
+  }
+
+  &--icon#{&}--solid {
+    @include button-bg($ar-gray);
+    background-color: $ar-gray;
+    color: $ar-white;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    width: 2.575rem;
+    height: 2.575rem;
+    padding: .625rem;
+  }
+
+  &--icon#{&}--pill {
+    @include button-pill($ar-gray);
+    border-radius: 50%;
+    background-color: $ar-gray;
+    color: $ar-white;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    width: 2.575rem;
+    height: 2.575rem;
+    padding: .625rem;
+  }
+
+  &--icon#{&}--outline {
+    @include button-outline($ar-gray);
+    background-color: transparent;
+    border: 2px solid $ar-gray;
+    color: $ar-gray;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    width: 2.575rem;
+    height: 2.575rem;
+    padding: .625rem;
+  }
+
+  /* Button Size */
+  &--sm {
+    min-width: 8.5rem;
+    font-size: 0.875rem;
+    padding: .75rem 2.5rem;
+  }
+
+  &--md {
+    min-width: 12.375rem;
+    font-size: 1.25rem;
+    padding: .75rem 4rem;
+  }
+
+  &--lg {
+    min-width: 17.5rem;
+    font-size: 1.25rem;
+    padding: .75em 5em;
+  }
+}

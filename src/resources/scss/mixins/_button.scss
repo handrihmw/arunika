@@ -1,0 +1,113 @@
+/* Box Shadows */
+$bxs-black: 0 6px 20px rgba(18, 18, 18, 0.32);
+$bxs-orange: 0px 8px 10px rgba(255, 176, 77, 0.32);
+$bxs-red: 0px 8px 10px rgba(244, 54, 54, 0.32);
+$bxs-green: 0px 8px 10px rgba(0, 191, 166, 0.32);
+$bxs-blue: 0px 8px 10px rgba(0,125,255, 0.32);
+
+%type-base {
+  color: #fff;
+  font-family: "NunitoSansRegular", sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Solid Button */
+@mixin button-bg($bg) {
+  background: $bg;
+
+  &:hover {
+    background: darken($bg, 3%);
+    color: $ar-white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    background: darken($bg, 5%);
+    border: 2px solid $ar-white;
+  }
+}
+
+/* Pill Button */
+@mixin button-pill($bp) {
+  background: $bp;
+
+  &:hover {
+    background: darken($bp, 3%);
+    color: $ar-white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    background: darken($bp, 5%);
+    border: 2px solid $ar-white;
+  }
+}
+
+/* Outline Button */
+@mixin button-outline($bo) {
+  background: transparent;
+  border-color: $bo;
+  color: $bo;
+
+  &:hover {
+    border-color: darken($bo, 5%);
+    color: $bo;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    border-color: darken($bo, 10%);
+  }
+}
+
+/* Neutral Button */
+@mixin button-neutral($bn) {
+  background: $ar-white;
+  color: darken($bn, 5%);
+
+  &:hover {
+    background: lighten($ar-orange, 40%);
+    color: darken($bn, 5%);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    background: lighten($bn, 30%);
+  }
+}
+
+/* Link Button */
+@mixin button-link($bl) {
+  background: transparent;
+  color: $ar-link;
+
+  &:hover {
+    color: darken($bl, 5%);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    color: darken($bl, 10%);
+  }
+}
+
+/* Disabled Button */
+@mixin button-disabled($bds) {
+  background: #ececec;
+  color: #a9afb8;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+/* Default Button */
+@mixin button-default($bd) {
+  background: #676767;
+  color: #ececec;
+  cursor: pointer;
+}

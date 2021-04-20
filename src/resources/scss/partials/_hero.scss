@@ -1,0 +1,62 @@
+.ar-hero {
+  align-items: center;
+  background-image: linear-gradient(45deg, rgba(0,52,155,1), rgba(0,92,255,.9219), rgba(0, 122, 255, 1));
+  color: #fff;
+  height : auto;
+  justify-content: center;
+  max-width : 100%;
+  overflow: hidden;
+  padding: 100px 0;
+
+  @include media-breakpoint-down(sm) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-family: 'NunitoSansBold', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, 10vw, 	3.125rem); 
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    font-family: 'NunitoSansRegular', sans-serif;
+    font-size: clamp(1rem, 10vw, 1.125rem);
+    line-height: 1.625em;
+    letter-spacing: .05em;
+    margin-bottom: 40px;
+    padding-right: 2rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
+  }
+
+  &__image-wrapper {
+    margin-top: 0;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 60px;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    height: auto;
+    image-rendering: auto;
+    max-width: 100%;
+
+    @include media-breakpoint-down(lg) {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: clamp(.75rem, .875rem, 1rem);
+    font-weight: 700;
+    line-height: 1.571rem;
+    letter-spacing: 0.05em;
+  }
+}

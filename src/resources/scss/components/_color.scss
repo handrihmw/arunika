@@ -1,0 +1,151 @@
+.ar-color {
+  color: #121212;
+  font-family: 'NunitoSansRegular', sans-serif;
+  font-size: .875rem;
+  letter-spacing: .0025em;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  &__name {
+    opacity: .87;
+  }
+
+  &__hex {
+    opacity: .4;
+    text-transform: uppercase;
+  }
+
+  &__preview {
+    border-radius: 4px;
+    padding: 1.5rem;
+
+    /* Primary Color */
+    &--hoster-blue {
+      background-color: #007dff;
+    }
+
+    &--dark-blue {
+      background-color: #0057b2;
+    }
+
+    &--light-blue {
+      background-color: #e0efff;
+    }
+
+    &--orange {
+      background-color: #ff9800;
+    }
+
+    &--dark-orange {
+      background-color: #c77700;
+    }
+
+    &--light-orange {
+      background-color: #ffe082;
+    }
+
+    &--gray {
+      background-color: #cacaca;
+    }
+
+    &--dark-gray {
+      background-color: #808080;
+    }
+
+    &--light-gray {
+      background-color: #e0e0e0;
+    }
+
+    /* Status Color */
+    &--red {
+      background-color: #f44336;
+    }
+
+    &--dark-red {
+      background-color: #a83232;
+    }
+
+    &--light-red {
+      background-color: #fbb2b2;
+    }
+
+    &--green {
+      background-color: #00bfa6;
+    }
+
+    &--dark-green {
+      background-color: #00897b;
+    }
+
+    &--light-green {
+      background-color: #adebe3;
+    }
+
+    &--yellow {
+      background-color: #ffc721;
+    }
+
+    &--dark-yellow {
+      background-color: #ffb547;
+    }
+
+    &--light-yellow {
+      background-color: #ffedb8;
+    }
+
+    /* Background Color */
+    &--primary {
+      background-color: #29384e;
+    }
+
+    &--white {
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    &--bright-blue {
+      background-color: #2199fa;
+      border: 1px solid #ddd;
+    }
+
+    &--secondary {
+      background-color: #546071;
+    }
+
+    &--black-solid {
+      background-color: #121212;
+    }
+
+    &--soft-pink {
+      background-color: #fd8ca9;
+    }
+
+    &--secondary-two {
+      background-color: #7f8895;
+    }
+
+    &--very-soft-blue {
+      background-color: #f5faff;
+      border: 1px solid #ddd;
+    }
+
+    &--soft-blue {
+      background-color: #94ccf7;
+    }
+
+    &--disable {
+      background-color: #a9afb8;
+    }
+
+    &--very-dark-blue {
+      background-color: #22273c;
+    }
+
+    &--soft-grey {
+      background-color: #f3faf6;
+      border: 1px solid #ddd;
+    }
+  }
+}

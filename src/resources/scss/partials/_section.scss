@@ -1,0 +1,33 @@
+.ar-section {
+  color: #343a40;
+  padding: 20px;
+
+  &__title {
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__description {
+    font-family: 'NunitoSansRegular', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  &__body {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 6px 20px rgb(17 26 104 / 20%);
+    backdrop-filter: blur(5px);
+    border-radius: 6px;
+    padding: 30px;
+  }
+
+  &__preview {
+    background: #f3f4f6;
+    border-radius: 6px;
+    height: auto;
+    padding: 20px;
+    width: 100%;
+  }
+}
