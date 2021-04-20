@@ -1,15 +1,10 @@
-window.$ = window.jQuery = require('jquery');
-require('popper.js');
-require('bootstrap');
-require('navigo');
+window.$ = window.jQuery = require('jquery/dist/jquery');
+require('popper.js/dist/umd/popper');
+require('bootstrap/dist/js/bootstrap');
 
 // Navigation
 jQuery(function ($) {
   $(".hamburger").click(function () {
     $(".navigation").toggleClass("open");
   })
-});
-
-$(document).ready(function () {
-  console.log('Webpack loaded yeaahh!');
 });
