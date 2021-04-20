@@ -1,5 +1,5 @@
-// const HtmlWebpackPlugin = require("html-webpack-plugin")
-// const CopyPlugin = require("copy-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const CopyPlugin = require("copy-webpack-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -63,15 +63,15 @@ module.exports = {
     ]
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   template: "./src/index.html",
-    //   filename: "./index.html",
-    // }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     { from: './src/views/*', to: './views' }
-    //   ],
-    // }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html",
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: './src/views/**/*', to: './views' }
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: "css/main.css",
       chunkFilename: "css/main.[id].css"

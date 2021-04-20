@@ -1,0 +1,4 @@
+// Module
+var code = "export default __webpack_public_path__ + \"d6199630b1e2aaa0f23980dd037ac06d.svg\";";
+// Exports
+export default code;
