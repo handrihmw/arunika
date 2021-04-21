@@ -1,0 +1,43 @@
+.brand-container {
+  padding: 20px;
+  
+  .brand-card,
+  .brand-card-transparent {
+    margin: 0 0 20px 0;
+    width: 100%;
+    
+    &:last-child {
+      margin: 0;
+    }
+  }
+  
+  @media (min-width: 550px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    
+    .brand-card,
+    .brand-card-transparent {
+      margin: 0;
+    }
+  }
+  
+  @media (min-width: 850px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.brand-card {
+  border-radius: 6px;
+  min-height: 100px;
+  padding: 12px;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-card-transparent {
+  @extend .brand-card;
+  background-color: transparent;
+}

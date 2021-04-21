@@ -1,0 +1,179 @@
+/* Headline Hero */
+.headline-hero {
+  &__title {
+    color: #29384e;
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: clamp(2rem, 3.5rem, 3.5rem);
+    line-height: 4rem;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-down(sm) {
+      line-height: 3.625rem;
+    }
+  }
+
+  &__description {
+    color: #546071;
+    font-family: 'NunitoSansRegular', sans-serif;
+    font-size: clamp(.875rem, 1rem, 1rem);
+    letter-spacing: .005em;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    opacity: .87;
+
+    @include media-breakpoint-down(sm) {
+      line-height: 1.25rem;
+    }
+  }
+}
+
+.headline-hero-left {
+  text-align: left;
+
+  &__title {
+    @extend .headline-hero__title;
+    max-width: 550px;
+  }
+
+  &__description {
+    @extend .headline-hero__description;
+    max-width: 550px;
+  }
+}
+
+.headline-hero-center {
+  text-align: center;
+
+  &__title {
+    @extend .headline-hero__title;
+    padding: 0 220px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem;
+    }
+  }
+
+  &__description {
+    @extend .headline-hero__description;
+  }
+}
+
+/* Headline Section */
+.headline-section {
+  &__title {
+    color: #29384e;
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: clamp(2rem, 2.5rem, 2.5rem);
+    letter-spacing: -.02em;
+    line-height: 3.5rem;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-down(sm) {
+      line-height: normal;
+    }
+  }
+
+  &__sub-title {
+    color: #7f8895;
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: clamp(1rem, 1.125rem, 1.125rem);
+    letter-spacing: .02em;
+    line-height: 1.688rem;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-down(sm) {
+      line-height: normal;
+    }
+  }
+
+  &__description {
+    color: #546071;
+    font-family: 'NunitoSansRegular', sans-serif;
+    font-size: clamp(.875rem, 1rem, 1rem);
+    letter-spacing: .005em;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    opacity: .87;
+
+    @include media-breakpoint-down(sm) {
+      line-height: normal;
+    }
+  }
+
+  &__link {
+    color: #007aff;
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: clamp(.875rem, 1rem, 1rem);
+    letter-spacing: .002em;
+    line-height: 2rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @include media-breakpoint-down(sm) {
+      line-height: normal;
+    }
+  }
+}
+
+.headline-section-left {
+  text-align: left;
+
+  &__title {
+    @extend .headline-section__title;
+    max-width: 550px;
+  }
+
+  &__sub-title {
+    @extend .headline-section__sub-title;
+    max-width: 550px;
+  }
+
+  &__description {
+    @extend .headline-section__description;
+    max-width: 550px;
+  }
+}
+
+.headline-section-center {
+  text-align: center;
+
+  &__title {
+    @extend .headline-section__title;
+    padding: 0 150px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem;
+    }
+  }
+
+  &__sub-title {
+    @extend .headline-section__sub-title;
+    padding: 0 180px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 3rem;
+    }
+  }
+
+  &__description {
+    @extend .headline-section__description;
+    padding: 0 210px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem;
+    }
+  }
+
+  &__link {
+    @extend .headline-section__link;
+    padding: 0 160px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 1rem;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+.section-white {
+  background: #fff;
+  height: auto;
+  padding: 90px;
+  text-align: center;
+  width: 100%;
+
+  &__title {
+    @extend .headline-section__title;
+    color: #29384e;
+    padding: 0 30px;
+  }
+
+  &__description {
+    @extend .headline-section__description;
+    color: #29384e;
+    padding: 0 120px;
+  }
+}
+
+.section-softblue {
+  background: #f5faff;
+  border: 2px solid #fff;
+  color: #29384e;
+  height: auto;
+  padding: 90px;
+  text-align: center;
+  width: 100%;
+
+  &__title {
+    @extend .headline-section__title;
+    color: #29384e;
+    padding: 0 30px;
+  }
+
+  &__sub-title {
+    color: #7f8895;
+    font-family: 'NunitoSansBold', sans-serif;
+    font-size: clamp(1rem, 1.125rem, 1.125rem);
+    letter-spacing: .02em;
+    line-height: 1.688rem;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-down(sm) {
+      line-height: normal;
+    }
+  }
+
+  &__description {
+    @extend .headline-section__description;
+    color: #29384e;
+    padding: 0 120px;
+  }
+
+  &__domain {
+    color: #7f8895;
+    font-family: 'NunitoSansBold', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.125rem, 1.5rem, 1.5rem);
+    line-height: 20px;
+    letter-spacing: .04em;
+  }
+
+  &__price {
+    color: #7f8895;
+    font-family: 'NunitoSansRegular', sans-serif;
+    font-weight: 600;
+    font-size: clamp(.75rem, .75rem, .875rem);
+    line-height: 1rem;
+    letter-spacing: .04em;
+  }
+}
+
+.section-blue {
+  background: linear-gradient(249.77deg, #0094ff -1.99%, #007dff 43.52%, #026ce8 95.86%);
+  height: auto;
+  padding: 90px;
+  text-align: center;
+  width: 100%;
+
+  &__title {
+    @extend .headline-section__title;
+    color: #fff;
+    padding: 0 30px;
+  }
+
+  &__description {
+    @extend .headline-section__description;
+    color: #fff;
+    padding: 0 220px;
+  }
+
+  &__button {
+    margin: 1.5rem 0;
+  }
+}
+
+.find-domain {
+  background: #fff;
+  padding-bottom: 40px;
+  padding-top: 44px;
+  width: 100%;
+
+  &__form {
+    float: none;
+    font-size: 1rem;
+    margin-top: 36px;
+    padding: 0 10px;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      float: none;
+      margin-top: 0;
+      width: auto;
+    }
+
+    input[type=email] {
+      border: 1px solid #c4c4c4;
+      border-radius: 24px;
+      color: #a9afb8;
+      display: block;
+      font-size: 1rem;
+      height: 48px;
+      letter-spacing: .005em;
+      margin-bottom: 10px;
+      margin-right: 5px;
+      min-width: auto;
+      position: relative;
+      text-align: center;
+      top: -4px;
+      width: 100%;
+
+      @media screen and (min-width: 480px) {
+        display: inline-block;
+        margin-bottom: 0;
+        width: calc(100% - 190px);
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: block;
+        margin-right: 16px;
+        min-width: 290px;
+        padding-left: 30px;
+        text-align: left;
+        width: auto;
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding-left: 30px;
+        text-align: left;
+        min-width: 500px;
+      }
+    }
+
+    button[type=submit] {
+      border-radius: 25px;
+      display: block;
+      float: none;
+      font-size: 1rem;
+      height: 50px;
+      line-height: 3.2;
+      margin-left: auto;
+      padding: 0 70px;
+      width: 100%;
+
+      @media screen and (min-width: 480px) {
+        display: inline-block;
+        width: auto;
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: block;
+        float: none;
+      }
+    }
+  }
+}
